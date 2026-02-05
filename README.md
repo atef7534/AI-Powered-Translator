@@ -1,11 +1,18 @@
 # AI-Powered Translator (Flask & AJAX)
+![python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![flask](https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white)
+![html](https://img.shields.io/badge/html-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![css](https://img.shields.io/badge/css-%231572B6.svg?style=flat&logo=css3&logoColor=white)
+![javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
+![gemini](https://img.shields.io/badge/gemini-886FBF?style=flat&logo=googlegemini&logoColor=white)
+![dotenv](https://img.shields.io/badge/dotenv-ecd53f?style=flat&logo=python&logoColor=3776ab)
 
 An AI-powered web-based translation application built using **Flask** and **AJAX**, following a clean **CS50-style project structure**.
 The app allows users to translate words, phrases, or full sentences between multiple languages in real time without reloading the page.
 
 The backend is powered by the **Google Gemini API**, while the frontend uses **vanilla JavaScript (Fetch API)** for asynchronous communication, providing a smooth and responsive user experience.
 
----
+![](https://i.imgur.com/waxVImv.png)
 
 ## 🚀 Features
 
@@ -15,15 +22,6 @@ The backend is powered by the **Google Gemini API**, while the frontend uses **v
 * CS50-inspired project structure (`templates` & `static`)
 * Secure API key management using environment variables
 * Simple and user-friendly interface
-
----
-
-## 🛠️ Tech Stack
-
-* **Backend:** Python, Flask
-* **Frontend:** HTML, CSS, JavaScript (AJAX / Fetch API)
-* **AI Model:** Google Gemini
-* **Environment Management:** python-dotenv
 
 ---
 
@@ -95,9 +93,9 @@ This project was built for learning purposes to demonstrate how to:
 ---
 
 ## 📌 Notes
-
-* Make sure your API key is kept private and **never committed to GitHub**.
-* This project is intended for educational and experimental use.
+> [!NOTE]
+> Make sure your API key is kept private and **never committed to GitHub**.
+> This project is intended for educational and experimental use.
 
 ---
 
