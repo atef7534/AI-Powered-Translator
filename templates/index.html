@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CS50 Translator</title>
+    <link rel="stylesheet" href="../static/index.css" />
+  </head>
+  <body>
+    <p class="desc">What's on the agenda today? 😊</p>
+
+    <p id="result"></p>
+
+    <input id="text" type="text" placeholder="Enter text" autocomplete="off" />
+
+    <div class="container">
+      <select id="lang">
+        <option value="English">English</option>
+        <option value="Arabic">Arabic</option>
+        <option value="German">German</option>
+      </select>
+      <button id="translate">Translate</button>
+    </div>
+
+    <script>
+      let translateBtn = document.getElementById("translate");
+      translateBtn.addEventListener("click", async function () {
+        const text = document.getElementById("text").value;
+        const lang = document.getElementById("lang").value;
+        const result = document.getElementById("result");
+
+        result.textContent = "Translating...";
+        result.style.display = "block";
+
+        try {
+          const response = await fetch("/translate", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ text, lang }),
+          });
+
+          const data = await response.json();
+
+          if (data.error) {
+            result.textContent = data.error;
+          } else {
+            result.textContent = data.translation;
+          }
+        } catch (error) {
+          result.textContent = "Something went wrong!";
+        }
+      });
+    </script>
+  </body>
+</html>
