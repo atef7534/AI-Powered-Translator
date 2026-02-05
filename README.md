@@ -7,6 +7,7 @@
 ![gemini](https://img.shields.io/badge/gemini-886FBF?style=flat&logo=googlegemini&logoColor=white)
 ![dotenv](https://img.shields.io/badge/dotenv-ecd53f?style=flat&logo=python&logoColor=3776ab)
 
+<img src="./view.png" alt="Image of this repo result: An AI-Powered Translator workflow demonstration"/>
 An AI-powered web-based translation application built using **Flask** and **AJAX**, following a clean **CS50-style project structure**.
 The app allows users to translate words, phrases, or full sentences between multiple languages in real time without reloading the page.
 
