@@ -1,104 +1,144 @@
-# AI-Powered Translator (Flask & AJAX)
-![python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
-![flask](https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white)
-![html](https://img.shields.io/badge/html-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
-![css](https://img.shields.io/badge/css-%231572B6.svg?style=flat&logo=css3&logoColor=white)
-![javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
-![gemini](https://img.shields.io/badge/gemini-886FBF?style=flat&logo=googlegemini&logoColor=white)
-![dotenv](https://img.shields.io/badge/dotenv-ecd53f?style=flat&logo=python&logoColor=3776ab)
+# AI-Powered Translator
 
-<img src="./view.png" alt="Image of this repo result: An AI-Powered Translator workflow demonstration"/>
+An AI-powered web translator built with **Flask**, **JavaScript**, and the **Google Gemini API**.
 
-An AI-powered web-based translation application built using **Flask** and **AJAX**, following a clean **CS50-style project structure**.
-The app allows users to translate words, phrases, or full sentences between multiple languages in real time without reloading the page.
+The project started as an exploration of how an AI API can be integrated into a traditional web application and turned into a simple, responsive translation experience.
 
-The backend is powered by the **Google Gemini API**, while the frontend uses **vanilla JavaScript (Fetch API)** for asynchronous communication, providing a smooth and responsive user experience.
+![Project preview](./view.png)
 
-![](https://i.imgur.com/waxVImv.png)
+## ✨ What it does
 
-## 🚀 Features
+- Translate words, phrases, and sentences between languages
+- Communicate with the backend without reloading the page
+- Use Gemini to generate translations
+- Keep the API key outside the source code with environment variables
+- Provide a simple interface for interacting with the translator
 
-* Real-time translation using AI
-* Asynchronous requests with AJAX (no page reload)
-* Clean Flask backend with REST-style endpoints
-* CS50-inspired project structure (`templates` & `static`)
-* Secure API key management using environment variables
-* Simple and user-friendly interface
+## 🧱 Architecture
 
----
+```text
+Browser
+   │
+   │ Fetch / AJAX
+   ▼
+Flask API
+   │
+   │ Gemini API request
+   ▼
+Google Gemini
+   │
+   ▼
+Translation response
+   │
+   ▼
+Browser
+```
+
+The frontend uses vanilla JavaScript and the Fetch API to communicate with Flask asynchronously. Flask handles the server-side logic and communicates with Gemini.
+
+## 🛠️ Built With
+
+- Python
+- Flask
+- Google Gemini API
+- JavaScript
+- Fetch API
+- HTML5
+- CSS3
+- python-dotenv
 
 ## 📂 Project Structure
 
-```
+```text
 translator/
 ├── app.py
-├── .env
 ├── requirements.txt
+├── .env
 ├── templates/
 │   └── index.html
 └── static/
     └── index.css
 ```
 
+## 🚀 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/atef7534/AI-Powered-Translator.git
+cd AI-Powered-Translator
+```
+
+### 2. Create a virtual environment
+
+Windows:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add your Gemini API key
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+**Never commit your real API key to GitHub.**
+
+### 5. Start the application
+
+```bash
+python app.py
+```
+
+Open:
+
+```text
+http://127.0.0.1:5000
+```
+
+## 🧠 What I Learned
+
+This project helped me understand the complete path of an AI-powered web request:
+
+**User input → frontend request → Flask backend → AI API → response → UI**
+
+It also gave me practical experience with:
+
+- Integrating an external AI API
+- Environment variables and secret management
+- Flask routes
+- Asynchronous browser requests
+- Separating frontend and backend responsibilities
+- Designing a small but complete AI-powered application
+
+## 🔮 Possible Next Steps
+
+If I continue developing this project, I'd like to add:
+
+- Translation history
+- More control over translation style
+- Better error handling and loading states
+- Automated tests
+- User accounts and saved translations
+- Streaming responses where appropriate
+
 ---
 
-## ▶️ How to Run
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repo-url>
-   cd translator
-   ```
-
-2. **Create and activate a virtual environment**
-
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate   # Windows
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Create a `.env` file**
-
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-5. **Run the Flask app**
-
-   ```bash
-   python app.py
-   ```
-
-6. Open your browser and go to:
-
-   ```
-   http://127.0.0.1:5000
-   ```
-
----
-
-## 🎯 Purpose
-
-This project was built for learning purposes to demonstrate how to:
-
-* Integrate AI APIs into a Flask application
-* Use AJAX for client-server communication
-* Organize a web project using best practices inspired by CS50
-
----
-
-## 📌 Notes
-> [!NOTE]
-> Make sure your API key is kept private and **never committed to GitHub**.
-> This project is intended for educational and experimental use.
-
----
-
-⭐ If you like this project, feel free to star the repository!
+**Built by Atif Yasser** · [GitHub](https://github.com/atef7534) · [LinkedIn](https://www.linkedin.com/in/atif-yasser/)
